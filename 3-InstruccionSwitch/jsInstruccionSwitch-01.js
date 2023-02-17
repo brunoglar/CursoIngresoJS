@@ -1,9 +1,22 @@
 function mostrar()
 {
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
 
+	let mesSeleccionado;
 
+		mesSeleccionado = document.getElementById("txtIdMes").value;
 
-}//FIN DE LA FUNCIÓN
+			switch(mesSeleccionado) {
+				case "Enero":
+					alert("Que comiences bien el año!!!");
+					break;
+				case "Marzo":
+					alert("A claseeeeesss");
+					break;
+				case "Julio":
+					alert("Se vienen las vacacionesd de invierno!!");
+					break;
+				case "Diciembre":
+					alert ("Felices fiestasssss!!");									  	
+    }
+
+}

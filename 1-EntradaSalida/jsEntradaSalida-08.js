@@ -7,7 +7,7 @@ function SacarResto()
 {
 	let num1;
 	let num2;
-	let resultado 
+	let resultado;
 	num1 = document.getElementById("txtIdNumeroDividendo").value;
 	num2 = document.getElementById("txtIdNumeroDivisor").value;
 	num1 = parseInt(num1);

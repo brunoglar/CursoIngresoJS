@@ -8,7 +8,7 @@ function sumar()
 	//resultado que es la suma de 1 y 2 
 	let num1;
 	let num2;
-	let resultado =  num1 + num2
+	let resultado;
 	//obtengo el id de la variable 1 y 2 en el html
 	num1 = document.getElementById("txtIdNumeroUno").value;
 	num2 = document.getElementById("txtIdNumeroDos").value;

@@ -8,7 +8,69 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio() {
+
+    let cantidadLamparas;
+    let precioActual;
+    let precioFinal;
+    let descuento;
+    let iBrutos;
+    let precioBrutofinal;
+    
+    precioActual = 35;
+    descuento = 0;
+    cantidadLamparas = document.getElementById("txtIdCantidad").value;
+    cantidadLamparas = parseInt(cantidadLamparas);
+    marca = document.getElementById("Marca").value;
+
+    if (cantidadLamparas > 5) {
+        descuento = 50;
+    }
+    else {
+        if (cantidadLamparas == 5 && marca == "ArgentinaLuz") {
+            descuento = 40;
+        }
+        else {
+            if(cantidadLamparas == 5 && marca != "ArgentinaLuz") {
+             descuento = 30;
+            }
+            else {
+                if ((cantidadLamparas == 4) && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")){
+                    descuento = 25;
+                }
+                else {
+                    if(cantidadLamparas == 4) {
+                        descuento = 20;
+                    }
+                    else {
+                        if(cantidadLamparas == 3 && marca == "ArgentinaLuz"){
+                            descuento = 15; 
+                        }
+                        else {
+                            if(marca == "FelipeLamparas"){
+                                descuento = 10;
+                                   
+                            }
+                            else{
+                                if(marca != "ArgentinaLamparas" && marca != "FelipeLamparas"){
+                                    descuento = 5;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }             
+        }
+    }  
+
+    precioActual = precioActual * cantidadLamparas;    
+    precioFinal = precioActual - (precioActual * descuento)/100;
+    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+    if (precioFinal > 120) {
+        iBrutos = precioFinal * 0.1;
+        precioBrutofinal = precioFinal + iBrutos;
+        document.getElementById("txtIdprecioDescuento").value = precioBrutofinal;
+        alert("IIBB Usted pago: " + iBrutos);
+    }
 }

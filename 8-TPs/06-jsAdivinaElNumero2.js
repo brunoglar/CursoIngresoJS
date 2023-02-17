@@ -22,7 +22,7 @@ function comenzar()
 
 function verificar()
 {
-	
+	 
 	
 
 }

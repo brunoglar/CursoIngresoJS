@@ -7,9 +7,10 @@ function FahrenheitCentigrados ()
     let temperF;
     let temperC;
 
-    temperF = parseFloat(document.getElementById("txtIdTemperatura").value);
-    temperC = (temperF - 32) / 1.8; 
-    alert(`${temperF} grados Fahrenheit son ${temperC.toFixed(1)} centigrados`);
+        temperF = document.getElementById("txtIdTemperatura").value;
+        temperF = parseFloat(temperF);
+        temperC = (temperF - 32) / 1.8; 
+        alert(temperF + " grados Fahrenheit son " + temperC + " centigrados");
 
 }
 
@@ -17,8 +18,10 @@ function CentigradosFahrenheit ()
 {
 	let temperF;
     let temperC;
-    temperC = parseFloat(document.getElementById("txtIdTemperatura").value);
-    temperF = temperC * 1.8 + 32;
-    // aca no hace falta parentesis porque la multiplicacion y division tiene prioridad por lo tanto se resuelve primero y despues se realiza la suma y resta
-    alert(`${temperC} centigrados son ${temperF.toFixed(1)} grados Fahrenheit`);
+
+        temperC = document.getElementById("txtIdTemperatura").value;
+        temperC = parseFloat(temperC);
+        temperF = temperC * 1.8 + 32;
+        // aca no hace falta parentesis porque la multiplicacion y division tiene prioridad por lo tanto se resuelve primero y despues se realiza la suma y resta
+        alert(temperC + " centigrados son " + temperF + " grados Fahrenheit");
 }
